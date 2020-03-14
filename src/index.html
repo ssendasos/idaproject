@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Component</title>
+</head>
+<body>
+  
+  <div class="container">
+    <h1 class="main-title">Table UI</h1>
+    <div class="sorting">
+      <ul class="sorting-links">
+        <li class="product">
+          <span class="sorted">Sorting by:</span>
+          <a href="#" class="product-link header-link">Product (100g serving)</a>
+        </li>
+        <li class="calories">
+          <a href="#" class="calories-link header-link">Calories</a>
+        </li>
+        <li class="fat">
+          <a href="#" class="fat-link header-link">Fat (g)</a>
+        </li>
+        <li class="carbs">
+          <a href="#" class="carbs-link header-link">Carbs (g)</a>
+        </li>
+        <li class="protein">
+          <a href="#" class="protein-link header-link">Protein (g)</a>
+        </li>
+        <li class="iron">
+          <a href="#" class="iron-link header-link">Iron (%)</a>
+        </li>
+      </ul>
+      <ul class="sorting-buttons">
+        <li class="delete">
+          <button class="delete-button button" type="button">Delete</button>
+        </li>
+        <li class="item-on-page">
+          <select name="item-on-page" id="item-on-page">
+            <option class="10-per-page per-page" name="10-per-page" value="10 Per Page" selected>10 Per Page</option>
+            <option class="15-per-page per-page" name="15-per-page" value="15 Per Page">15 Per Page</option>
+            <option class="20-per-page per-page" name="20-per-page" value="20 Per Page">20 Per Page</option>
+          </select>
+        </li>
+        <li class="pages">
+          <button type="button" class="prev-button page-button"><</button>
+          <span class="current-page">1-10 of 25</span>
+          <button type="button" class="next-button page-button">></button>
+        </li>
+      </ul>
+    </div>
+    <table class="table">
+      <tr class="table-headers">
+        <td class="item-checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+        </td>
+        <th class="product">
+          <a href="#" class="product-link header-link">Product (100g serving)</a>
+        </th>
+        <th class="calories">
+          <a href="#" class="calories-link header-link">Calories</a>
+        </th>
+        <th class="fat">
+          <a href="#" class="fat-link header-link">Fat (g)</a>
+        </th>
+        <th class="carbs">
+          <a href="#" class="carbs-link header-link">Carbs (g)</a>
+        </th>
+        <th class="protein">
+          <a href="#" class="protein-link header-link">Protein (g)</a>
+        </th>
+        <th class="iron">
+          <a href="#" class="iron-link header-link">Iron (%)</a>
+        </th>
+      </tr>
+      <tr class="table-item">
+        <td class="item-checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox">
+        </td>
+        <td class="item-product">Frozen Yogurt</td>
+        <td class="item-calories">125</td>
+        <td class="item-fat">224</td>
+        <td class="item-carbs">486</td>
+        <td class="item-protein">696</td>
+        <td class="item-iron">536</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html> 
