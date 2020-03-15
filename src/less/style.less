@@ -1,7 +1,296 @@
 @import '~normalize.css';
 @import 'font.less';
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #282136;
+}
+
+.container {
+  width: 1207px;
+  margin: 0 auto;
+  
+}
+
 .main-title {
   font-size: 32px;
   line-height: 40px;
+  font-weight: 600;
 }
+
+.sorted {
+  font-weight: 600;
+}
+
+.sorting {
+  display: flex;
+  border-top: 2px solid #EDEDED;
+  padding-top: 18px;
+}
+
+.sorting-links {
+  display: flex;
+  margin-left: 8px;
+}
+
+.sorting-buttons {
+  display: flex;
+  margin-left: 68px;
+  margin-top: -3px;
+}
+
+.sorting-link {
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-right: 5px;
+  border-radius: 2px;
+  transition: background-color .5s ease, 
+              color .5s ease;
+  
+  &:hover {
+    background-color: #00A11E;
+    color: #ffffff;
+  }
+}
+
+.sorting-buttons li {
+  padding: 0;
+}
+
+.button {
+  border: 1px solid #C6CBD4;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  transition: background-color .5s ease, 
+              color .5s ease;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #00A11E;
+    color: #ffffff;
+    border-color: #00A11E;
+  }
+}
+
+.delete-button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 19px;
+  padding-right: 11px;
+}
+
+.item-on-page {
+  position: relative;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 14px;
+  padding-right: 27px;
+  border: 1px solid #c6cbd4;
+  border-radius: 2px;
+  background-color: #f2f2f2;
+  
+  
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.items-on-page {
+  position: relative;
+  margin-left: 12px;
+}
+
+.items-on-page::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 98px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/arrow.png');
+  background-repeat: no-repeat;
+  z-index: 10;
+  transform: rotate(90deg);
+}
+
+.pages {
+  margin-left: 16px
+}
+
+
+.page-button {
+  padding-top: 16px;
+  padding-bottom: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-image: url('../img/arrow.png');
+  background-repeat: no-repeat;
+  background-position: 3px 3px;
+}
+
+.prev-button {
+  transform: rotate(180deg);
+  
+}
+
+.current-page {
+  display: inline-block;
+  transform: translateY(4px);
+  font-weight: 600;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.selected-columns {
+  position: relative;
+  margin-left: 16px;
+}
+
+.selected-columns::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 140px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/arrow.png');
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+
+.selected-button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 26px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-input {
+  display: none;
+}
+
+.label-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+.label-checkbox input[type="checkbox"] + .custom-checkbox {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #C6CBD4;
+  border-radius: 2px;
+  transition: background-color .5s ease,
+              border-color .5s ease;
+}
+
+.label-checkbox input[type="checkbox"]:hover + .custom-checkbox {
+  background-color: #00a11e;
+}
+
+.label-checkbox input[type="checkbox"]:checked + .custom-checkbox::before {
+  position: absolute;
+  content: "";
+
+  width: 8px;
+  height: 3px;
+  top: 3px;
+  left: 2px;
+  
+  border: 2px solid #ffffff;
+  border-top: none;
+  border-right: none;
+  border-radius: 2px;
+  
+
+  transform: rotate(-50deg);
+}
+
+.label-checkbox input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #00A11E;
+  border-color: #00A11E;
+}
+
+.table-item td,
+.header-item {
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+.label-checkbox {
+  margin-left: 37px;
+  margin-right: 43px;
+}
+
+
+
+.table {
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.header-item {
+  width: 1207px;
+  text-align: left;
+}
+
+.table-headers {
+  background-color: #ffffff;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.table-item {
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 161, 30, 0.07);;
+  }
+}
+
+
+
+
+
+
+.table-item:nth-child(odd) {
+  background-color: #F8F9FA;
+}
+
+.table-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.table-item {
+  cursor: pointer;
+  transition: background-color .5s ease;
+
+  &:hover {
+    background-color: rgba(0, 161, 30, 0.07);;
+  }
+}
+
+ 
+
+
+
+
+
+
+
+
